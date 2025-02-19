@@ -1,1 +1,0 @@
-C:\Main\VStudio\Projects\EasySEC\EasySEC\EasySEC.csproj;x64

@@ -1,0 +1,15 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasySEC.App">
+    <Application.Resources>
+        <!-- Глобальный фон страницы -->
+        <Color x:Key="PageBackgroundColor">#F0F0F0</Color>
+        <!-- Пример стиля для кнопок -->
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+    </Application.Resources>
+</Application>
