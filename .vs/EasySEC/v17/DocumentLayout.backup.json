@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Main\\VStudio\\Projects\\EasySEC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\easysec.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\easysec.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\placeholderpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\placeholderpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\placeholderpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\placeholderpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\documentspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\documentspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|c:\\main\\vstudio\\projects\\easysec\\easysec\\documentspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45F45EF7-5CFE-49BE-8DF9-2D82CBDAEC2A}|EasySEC\\EasySEC.csproj|solutionrelative:easysec\\documentspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlaceholderPage.xaml.cs",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\PlaceholderPage.xaml.cs",
+              "RelativeDocumentMoniker": "EasySEC\\PlaceholderPage.xaml.cs",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\PlaceholderPage.xaml.cs",
+              "RelativeToolTip": "EasySEC\\PlaceholderPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T20:03:06.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlaceholderPage.xaml",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\PlaceholderPage.xaml",
+              "RelativeDocumentMoniker": "EasySEC\\PlaceholderPage.xaml",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\PlaceholderPage.xaml",
+              "RelativeToolTip": "EasySEC\\PlaceholderPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T20:02:53.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DocumentsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\DocumentsPage.xaml.cs",
+              "RelativeDocumentMoniker": "EasySEC\\DocumentsPage.xaml.cs",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\DocumentsPage.xaml.cs",
+              "RelativeToolTip": "EasySEC\\DocumentsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T20:01:28.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DocumentsPage.xaml",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\DocumentsPage.xaml",
+              "RelativeDocumentMoniker": "EasySEC\\DocumentsPage.xaml",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\DocumentsPage.xaml",
+              "RelativeToolTip": "EasySEC\\DocumentsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T20:01:18.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "EasySEC\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\MainPage.xaml.cs",
+              "RelativeToolTip": "EasySEC\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T20:00:53.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\MainPage.xaml",
+              "RelativeDocumentMoniker": "EasySEC\\MainPage.xaml",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\MainPage.xaml",
+              "RelativeToolTip": "EasySEC\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T20:00:34.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\App.xaml",
+              "RelativeDocumentMoniker": "EasySEC\\App.xaml",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\App.xaml",
+              "RelativeToolTip": "EasySEC\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T20:04:59.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\AppShell.xaml",
+              "RelativeDocumentMoniker": "EasySEC\\AppShell.xaml",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\AppShell.xaml*",
+              "RelativeToolTip": "EasySEC\\AppShell.xaml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T20:00:04.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "EasySEC\\MauiProgram.cs",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\MauiProgram.cs",
+              "RelativeToolTip": "EasySEC\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T20:03:55.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\App.xaml.cs",
+              "RelativeDocumentMoniker": "EasySEC\\App.xaml.cs",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\App.xaml.cs",
+              "RelativeToolTip": "EasySEC\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T20:05:16.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "EasySEC\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\AppShell.xaml.cs",
+              "RelativeToolTip": "EasySEC\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T20:00:03.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EasySEC",
+              "DocumentMoniker": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
+              "RelativeDocumentMoniker": "EasySEC\\EasySEC.csproj",
+              "ToolTip": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
+              "RelativeToolTip": "EasySEC\\EasySEC.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-19T20:21:02.728Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
