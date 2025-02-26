@@ -9,4 +9,21 @@
                HorizontalOptions="Center" />
     </StackLayout>
 
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Label Text="Fill in Your Details" FontSize="Large" TextColor="#333333" HorizontalOptions="Center" />
+
+        <Label Text="Name:" TextColor="#333333" />
+        <Entry x:Name="nameEntry" Placeholder="Enter your name" />
+
+        <Label Text="Age:" TextColor="#333333" />
+        <Entry x:Name="ageEntry" Placeholder="Enter your age" Keyboard="Numeric" />
+
+        <Label Text="Address:" TextColor="#333333" />
+        <Entry x:Name="addressEntry" Placeholder="Enter your address" />
+
+        <Label Text="Email:" TextColor="#333333" />
+        <Entry x:Name="emailEntry" Placeholder="Enter your email" Keyboard="Email" />
+
+        <Button Text="Submit" Clicked="OnSubmitClicked" HorizontalOptions="Center" />
+    </VerticalStackLayout>
 </ContentPage>
