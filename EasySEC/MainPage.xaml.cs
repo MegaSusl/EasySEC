@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 using Xceed.Words.NET;
 
 namespace EasySEC
@@ -10,7 +11,7 @@ namespace EasySEC
         public MainPage(ILogger<MainPage> logger)
         {
             InitializeComponent();
-            EnsureTemplatesFolderExists().GetAwaiter().GetResult();
+            EnsureFoldersExist().GetAwaiter().GetResult();
             _logger = logger;
         }
 
@@ -21,7 +22,7 @@ namespace EasySEC
         }
         private async void OnSubmitClicked(object sender, EventArgs e)
         {
-            // Collect form data
+            // Collect form data (e.g., from Entry controls)
             string name = nameEntry.Text ?? "";
             string age = ageEntry.Text ?? "";
             string address = addressEntry.Text ?? "";
@@ -36,47 +37,48 @@ namespace EasySEC
 
             try
             {
-                // Load the template from the Templates folder in AppDataDirectory
+                // Load template from Templates folder
                 string templatePath = Path.Combine(FileSystem.AppDataDirectory, "Templates", "template.docx");
                 using var doc = DocX.Load(templatePath);
 
-                // Replace placeholders
+                // Replace placeholders in the template
                 doc.ReplaceText("[Name]", name);
                 doc.ReplaceText("[Age]", age);
                 doc.ReplaceText("[Address]", address);
                 doc.ReplaceText("[Email]", email);
 
-                // Generate a unique filename with timestamp
+                // Create a unique filename with a timestamp
                 string timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
-                string newFilePath = Path.Combine(FileSystem.AppDataDirectory, $"filled_document_{timestamp}.docx");
+                string outputFileName = $"filled_document_{timestamp}.docx";
+                string outputPath = Path.Combine(FileSystem.AppDataDirectory, "Output", outputFileName);
 
-                // Save the new document
-                doc.SaveAs(newFilePath);
+                // Save the filled document to Output folder
+                doc.SaveAs(outputPath);
 
-                // Show success message
-                await DisplayAlert("Success", $"Document saved to: {newFilePath}", "OK");
+                // Notify the user
+                await DisplayAlert("Success", $"Document saved to: {outputPath}", "OK");
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
             }
         }
-        private async Task EnsureTemplatesFolderExists()
+        private async Task EnsureFoldersExist()
         {
-            string templatesDir = Path.Combine(FileSystem.AppDataDirectory, "templates");
-            string defaultTemplatePath = Path.Combine(templatesDir, "template.docx");
+            // Define paths for Templates and Output folders
+            string templatesDir = Path.Combine(FileSystem.AppDataDirectory, "Templates");
+            string outputDir = Path.Combine(FileSystem.AppDataDirectory, "Output");
 
+            // Create Templates folder and copy templates if it doesn’t exist
             if (!Directory.Exists(templatesDir))
             {
                 Directory.CreateDirectory(templatesDir);
             }
 
-            if (!File.Exists(defaultTemplatePath))
+            // Create Output folder if it doesn’t exist
+            if (!Directory.Exists(outputDir))
             {
-                // Copy default template from bundled asset to Templates folder
-                using var stream = await FileSystem.OpenAppPackageFileAsync("templates/template.docx");
-                using var fileStream = File.OpenWrite(defaultTemplatePath);
-                await stream.CopyToAsync(fileStream);
+                Directory.CreateDirectory(outputDir);
             }
         }
     }

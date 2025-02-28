@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj": {}
+    "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj": {}
   },
   "projects": {
-    "D:\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj": {
+    "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
+        "projectUniqueName": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
         "projectName": "EasySEC",
-        "projectPath": "D:\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
+        "projectPath": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
         "packagesPath": "C:\\Users\\Susli\\.nuget\\packages\\",
-        "outputPath": "D:\\VStudio\\Projects\\EasySEC\\EasySEC\\obj\\",
+        "outputPath": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Main\\VStudio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Susli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -30,7 +30,6 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "D:\\Fast Reports\\2024.2.6\\FastReport .NET Trial\\Nugets": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

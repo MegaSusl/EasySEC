@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NvO2B1X51cc=",
+  "dgSpecHash": "5/L1hrbYnSk=",
   "success": true,
-  "projectFilePath": "D:\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
+  "projectFilePath": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Susli\\.nuget\\packages\\docx\\4.0.25103.5784\\docx.4.0.25103.5784.nupkg.sha512",
     "C:\\Users\\Susli\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",

@@ -4,8 +4,28 @@
              x:Class="EasySEC.DocumentsPage"
              Title="DocumentsPage">
     <StackLayout Padding="20">
-        <Label Text="Здесь отображаются документы." 
-               FontSize="24" 
-               HorizontalOptions="Center" />
+        <!-- Buttons above the list -->
+        <HorizontalStackLayout Spacing="10" Margin="0,10,0,10">
+            <Button Text="Open Folder" Clicked="OnOpenFolderClicked" />
+            <Button Text="New Template" Clicked="OnNewTemplateClicked" />
+        </HorizontalStackLayout>
+
+        <!-- List of templates -->
+        <CollectionView x:Name="templatesCollectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding Name}" VerticalOptions="Center" Grid.Column="0" />
+                        <Button Text="Edit" Clicked="OnEditClicked" Grid.Column="1" Margin="5,0,0,0" />
+                        <Button Text="Delete" Clicked="OnDeleteClicked" Grid.Column="2" Margin="5,0,0,0" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </StackLayout>
 </ContentPage>
