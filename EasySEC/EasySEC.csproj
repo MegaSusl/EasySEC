@@ -76,4 +76,8 @@
 	  <Folder Include="Resources\Images\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiImage Include="Resources\icons\home.png" />
+	</ItemGroup>
+
 </Project>
