@@ -23,6 +23,9 @@
 
             <Label Text="Email:" TextColor="#333333" />
             <Entry x:Name="emailEntry" Placeholder="Enter your email" Keyboard="Email" />
+            
+            <Label Text="Group:" TextColor="#333333" />
+            <Entry x:Name="groupEntry" Placeholder="Enter group"/>
 
             <Button Text="Submit" Clicked="OnSubmitClicked" HorizontalOptions="Center" />
         </VerticalStackLayout>

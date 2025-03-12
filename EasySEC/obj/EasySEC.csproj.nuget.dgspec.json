@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj": {}
+    "C:\\Users\\Susli\\source\\repos\\MegaSusl\\EasySEC\\EasySEC\\EasySEC.csproj": {}
   },
   "projects": {
-    "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj": {
+    "C:\\Users\\Susli\\source\\repos\\MegaSusl\\EasySEC\\EasySEC\\EasySEC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
+        "projectUniqueName": "C:\\Users\\Susli\\source\\repos\\MegaSusl\\EasySEC\\EasySEC\\EasySEC.csproj",
         "projectName": "EasySEC",
-        "projectPath": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
+        "projectPath": "C:\\Users\\Susli\\source\\repos\\MegaSusl\\EasySEC\\EasySEC\\EasySEC.csproj",
         "packagesPath": "C:\\Users\\Susli\\.nuget\\packages\\",
-        "outputPath": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\obj\\",
+        "outputPath": "C:\\Users\\Susli\\source\\repos\\MegaSusl\\EasySEC\\EasySEC\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
-          "C:\\Main\\VStudio\\Shared\\NuGetPackages"
+          "C:\\Main\\VStudio\\SDK\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Susli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -77,6 +77,10 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.100, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [
@@ -121,6 +125,10 @@
               "target": "Package",
               "version": "[8.0.13, )",
               "autoReferenced": true
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [
@@ -184,6 +192,10 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.100, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [

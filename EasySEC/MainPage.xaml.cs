@@ -27,6 +27,7 @@ namespace EasySEC
             string age = ageEntry.Text ?? "";
             string address = addressEntry.Text ?? "";
             string email = emailEntry.Text ?? "";
+            string group = groupEntry.Text ?? "";
 
             // Basic validation
             if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(age))
@@ -43,9 +44,10 @@ namespace EasySEC
 
                 // Replace placeholders in the template
                 doc.ReplaceText("[Name]", name);
-                doc.ReplaceText("[Age]", age);
+                doc.ReplaceText("[GROUP]", group);
+                //doc.ReplaceText("[Age]", age);
                 doc.ReplaceText("[Address]", address);
-                doc.ReplaceText("[Email]", email);
+                //doc.ReplaceText("[Email]", email);
 
                 // Create a unique filename with a timestamp
                 string timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
