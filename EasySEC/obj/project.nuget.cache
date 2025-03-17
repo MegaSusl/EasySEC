@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iANIBuytypY=",
+  "dgSpecHash": "8Pc0dlq1yoI=",
   "success": true,
-  "projectFilePath": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
+  "projectFilePath": "C:\\Users\\Susli\\source\\repos\\MegaSusl\\EasySEC\\EasySEC\\EasySEC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Susli\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\Susli\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

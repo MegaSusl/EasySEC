@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EasySEC.DocumentsPage"
-             Title="DocumentsPage">
-    <StackLayout Padding="20">
-        <Label Text="Здесь отображаются документы." 
-               FontSize="24" 
-               HorizontalOptions="Center" />
+             x:Class="EasySEC.Views.DocumentsPage"
+             Title="Документы">
+    <StackLayout Padding="0,10,0,0">
+        <Label Text="Список документов" FontSize="24" Padding="10" />
+        <ListView>
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}" >
+                    <x:String >Протокол №1</x:String>
+                    <x:String>Протокол №2</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+        <Frame Grid.Row="1" BackgroundColor="#3B3A3A" Padding="10" CornerRadius="0" HorizontalOptions="FillAndExpand">
+            <Grid ColumnDefinitions="*,*,*">
+                <Label Grid.Column="0" Text="Документов создано: 15" TextColor="White" />
+                <Label Grid.Column="1" Text="Студентов в базе: 120" TextColor="White" />
+                <Label Grid.Column="2" Text="Ближайшее заседание: 25.02.2025" TextColor="White" />
+            </Grid>
+        </Frame>
     </StackLayout>
 </ContentPage>

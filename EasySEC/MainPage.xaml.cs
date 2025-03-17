@@ -1,21 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
+﻿namespace EasySEC.Views;
 
-namespace EasySEC
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        readonly ILogger<MainPage> _logger;
-
-        public MainPage(ILogger<MainPage> logger)
-        {
-            InitializeComponent();
-            _logger = logger;
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            _logger.LogInformation("Главная страница отображается");
-        }
+        InitializeComponent();
     }
 }

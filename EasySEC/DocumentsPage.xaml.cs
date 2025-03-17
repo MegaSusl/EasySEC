@@ -1,20 +1,9 @@
-using Microsoft.Extensions.Logging;
-
-namespace EasySEC;
+namespace EasySEC.Views;
 
 public partial class DocumentsPage : ContentPage
 {
-    readonly ILogger<DocumentsPage> _logger;
-
-    public DocumentsPage(ILogger<DocumentsPage> logger)
+    public DocumentsPage()
     {
         InitializeComponent();
-        _logger = logger;
-    }
-
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-        _logger.LogInformation("Страница документов отображается");
     }
 }

@@ -23400,11 +23400,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
+      "projectUniqueName": "C:\\Users\\Susli\\source\\repos\\MegaSusl\\EasySEC\\EasySEC\\EasySEC.csproj",
       "projectName": "EasySEC",
-      "projectPath": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\EasySEC.csproj",
+      "projectPath": "C:\\Users\\Susli\\source\\repos\\MegaSusl\\EasySEC\\EasySEC\\EasySEC.csproj",
       "packagesPath": "C:\\Users\\Susli\\.nuget\\packages\\",
-      "outputPath": "C:\\Main\\VStudio\\Projects\\EasySEC\\EasySEC\\obj\\",
+      "outputPath": "C:\\Users\\Susli\\source\\repos\\MegaSusl\\EasySEC\\EasySEC\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

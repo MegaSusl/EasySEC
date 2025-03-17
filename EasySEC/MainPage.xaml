@@ -1,12 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EasySEC.MainPage"
-             Title="MainPage">
-    <StackLayout Padding="20">
-        <Label Text="Добро пожаловать на главную страницу!" 
-               FontSize="24" 
-               HorizontalOptions="Center" />
-    </StackLayout>
+             x:Class="EasySEC.Views.MainPage">
 
+    <Grid RowDefinitions="*,Auto" Padding="0,10,1,1" BackgroundColor="#1E1E1E">
+        <!-- Основное содержимое -->
+        <ScrollView Grid.Row="0">
+            <Grid RowDefinitions="Auto,Auto">
+                <!-- Первая рамка: Ближайшие заседания -->
+                <Frame Grid.Row="0" BackgroundColor="#D9D9D9"  Padding="10" Margin="10" CornerRadius="5">
+                    <Grid>
+                        <StackLayout>
+                            <Label Text="Ближайшие заседания" TextColor="black" FontSize="18" />
+                            <Label Text="25.10.2023: Защита дипломов (группа ИВТ-401)" TextColor="black" Style="{StaticResource BodyTextStyle}" />
+                            <Label Text="27.10.2023: Обсуждение учебного плана" TextColor="black" Style="{StaticResource BodyTextStyle}" />
+                        </StackLayout>
+                        
+                    </Grid>
+                </Frame>
+
+                <!-- Вторая рамка: Уведомления -->
+                <Frame Grid.Row="1" BackgroundColor="#D9D9D9" Padding="10" Margin="10" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="Уведомления" TextColor="black" FontSize="18" />
+                        <Label Text="Завтра заседание комиссии в 10:00" TextColor="black" Style="{StaticResource BodyTextStyle}" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </ScrollView>
+
+        <Frame Grid.Row="1" BackgroundColor="#3B3A3A" Padding="10" CornerRadius="0" HorizontalOptions="FillAndExpand">
+            <Grid ColumnDefinitions="*,*,*">
+                <Label Grid.Column="0" Text="Документов создано: 15" TextColor="White" />
+                <Label Grid.Column="1" Text="Студентов в базе: 120" TextColor="White" />
+                <Label Grid.Column="2" Text="Ближайшее заседание: 25.02.2025" TextColor="White" />
+            </Grid>
+        </Frame>
+    </Grid>
+    
 </ContentPage>
