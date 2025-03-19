@@ -57,7 +57,6 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\PNGs\General\docs.png" />
-	  <None Remove="Resources\PNGs\General\main.png" />
 	  <None Remove="Resources\PNGs\General\prepod.png" />
 	  <None Remove="Resources\PNGs\General\settings.png" />
 	  <None Remove="Resources\PNGs\General\shabl.png" />
@@ -91,7 +90,6 @@
 	<ItemGroup>
 	  <MauiImage Include="Resources\icons\home.png" />
 	  <MauiImage Include="Resources\PNGs\General\docs.png" />
-	  <MauiImage Include="Resources\PNGs\General\main.png" />
 	  <MauiImage Include="Resources\PNGs\General\prepod.png" />
 	  <MauiImage Include="Resources\PNGs\General\settings.png" />
 	  <MauiImage Include="Resources\PNGs\General\shabl.png" />
