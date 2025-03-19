@@ -56,6 +56,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\PNGs\General\docs.png" />
+	  <None Remove="Resources\PNGs\General\prepod.png" />
+	  <None Remove="Resources\PNGs\General\settings.png" />
+	  <None Remove="Resources\PNGs\General\shabl.png" />
+	  <None Remove="Resources\PNGs\General\students.png" />
+	  <None Remove="Resources\PNGs\General\zas.png" />
+	  <None Remove="Resources\PNGs\main.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="DocX" Version="4.0.25103.5784" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
@@ -79,6 +89,13 @@
 
 	<ItemGroup>
 	  <MauiImage Include="Resources\icons\home.png" />
+	  <MauiImage Include="Resources\PNGs\General\docs.png" />
+	  <MauiImage Include="Resources\PNGs\General\prepod.png" />
+	  <MauiImage Include="Resources\PNGs\General\settings.png" />
+	  <MauiImage Include="Resources\PNGs\General\shabl.png" />
+	  <MauiImage Include="Resources\PNGs\General\students.png" />
+	  <MauiImage Include="Resources\PNGs\General\zas.png" />
+	  <MauiImage Include="Resources\PNGs\main.png" />
 	</ItemGroup>
 
 </Project>

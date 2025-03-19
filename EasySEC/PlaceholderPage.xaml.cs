@@ -1,20 +1,9 @@
-using Microsoft.Extensions.Logging;
-
-namespace EasySEC;
+namespace EasySEC.Views;
 
 public partial class PlaceholderPage : ContentPage
 {
-    readonly ILogger<PlaceholderPage> _logger;
-
-    public PlaceholderPage(ILogger<PlaceholderPage> logger)
+    public PlaceholderPage()
     {
         InitializeComponent();
-        _logger = logger;
-    }
-
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-        _logger.LogInformation("Заглушка отображается");
     }
 }

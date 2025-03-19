@@ -1,28 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="EasySEC.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:EasySEC"
-    Shell.FlyoutBehavior="Disabled"
-    Title="EasySEC">
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:EasySEC.Views"
+       x:Class="EasySEC.AppShell"
+       FlyoutBehavior="Locked"
+       FlyoutBackgroundColor="#3B3A3A">
 
-    <TabBar>
-        <Tab Title="Главная" Icon="home.png">
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
-        </Tab>
-        <Tab Title="Документы" Icon="documents.png">
-            <ShellContent ContentTemplate="{DataTemplate local:DocumentsPage}" />
-        </Tab>
-        <Tab Title="Студенты" Icon="students.png">
-            <ShellContent ContentTemplate="{DataTemplate local:PlaceholderPage}" />
-        </Tab>
-        <Tab Title="Преподаватели" Icon="teachers.png">
-            <ShellContent ContentTemplate="{DataTemplate local:PlaceholderPage}" />
-        </Tab>
-        <Tab Title="Шаблоны" Icon="templates.png">
-            <ShellContent ContentTemplate="{DataTemplate local:PlaceholderPage}" />
-        </Tab>
-    </TabBar>
+    
+
+    <!-- Заголовок боковой панели -->
+    <Shell.FlyoutHeader>
+        <Label Text="EasySEC"  Style="{StaticResource HeaderLabelStyle}" />
+    </Shell.FlyoutHeader>
+    
+    
+
+    <!-- Элементы навигации -->
+    <ShellContent Title="Главная" Icon="main.png" ContentTemplate="{DataTemplate views:MainPage}" />
+    <ShellContent Title="Документы" Icon="docs.png" ContentTemplate="{DataTemplate views:DocumentsPage}" />
+    <ShellContent Title="Заседания" Icon="zas.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
+    <ShellContent Title="Студенты" Icon="students.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
+    <ShellContent Title="Преподаватели" Icon="prepod.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
+    <ShellContent Title="Шаблоны" Icon="shabl.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
+    <ShellContent Title="Настройки" Icon="settings.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
+
+    
 
 </Shell>
