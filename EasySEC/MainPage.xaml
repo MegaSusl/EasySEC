@@ -15,7 +15,7 @@
                             <Label Text="25.10.2023: Защита дипломов (группа ИВТ-401)" TextColor="black" Style="{StaticResource BodyTextStyle}" />
                             <Label Text="27.10.2023: Обсуждение учебного плана" TextColor="black" Style="{StaticResource BodyTextStyle}" />
                         </StackLayout>
-                        
+
                     </Grid>
                 </Frame>
 
@@ -37,5 +37,5 @@
             </Grid>
         </Frame>
     </Grid>
-    
+
 </ContentPage>
