@@ -24,6 +24,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<DatabaseService>(sp =>
             new DatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "easysec.db3")));
 
+        var dbPath = Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3");
+        var dbService = new DatabaseService(dbPath);
+
         return builder.Build();
     }
 }

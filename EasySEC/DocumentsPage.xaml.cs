@@ -1,4 +1,6 @@
 namespace EasySEC.Views;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 
 public partial class DocumentsPage : ContentPage
 {
@@ -6,7 +8,7 @@ public partial class DocumentsPage : ContentPage
     private List<TemplateItem> templates;
 
     public DocumentsPage(ILogger<DocumentsPage> logger)
-    {        
+    {
         InitializeComponent();
         _logger = logger;
     }
@@ -44,7 +46,7 @@ public partial class DocumentsPage : ContentPage
     private void OnOpenFolderClicked(object sender, EventArgs e)
     {
         string templatesDir = Path.Combine(FileSystem.AppDataDirectory, "Templates");
-        
+
         #if WINDOWS
             if (Directory.Exists(templatesDir))
             {
