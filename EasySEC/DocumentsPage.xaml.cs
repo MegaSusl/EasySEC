@@ -1,4 +1,4 @@
-namespace EasySEC.Views;
+namespace EasySEC;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 
@@ -17,7 +17,7 @@ public partial class DocumentsPage : ContentPage
     {
         base.OnAppearing();
         LoadTemplates();
-        _logger.LogInformation("�������� ���������� ������������");
+        _logger.LogInformation("Опа");
     }
 
     private void LoadTemplates()

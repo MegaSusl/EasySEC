@@ -21,11 +21,11 @@ public static class MauiProgram
 #endif
 
         // Регистрация сервиса базы данных
-        builder.Services.AddSingleton<DatabaseService>(sp =>
-            new DatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "easysec.db3")));
+        //builder.Services.AddSingleton<DatabaseService>(sp =>
+        //    new DatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "easysec.db3")));
 
-        var dbPath = Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3");
-        var dbService = new DatabaseService(dbPath);
+        //var dbPath = Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3");
+        //var dbService = new DatabaseService(dbPath);
 
         return builder.Build();
     }

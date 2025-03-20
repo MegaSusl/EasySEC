@@ -1,4 +1,4 @@
-namespace EasySEC.Views;
+namespace EasySEC;
 
 public partial class PlaceholderPage : ContentPage
 {
