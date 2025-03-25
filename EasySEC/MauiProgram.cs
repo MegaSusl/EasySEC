@@ -15,17 +15,21 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
-
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
 
-        // Регистрация сервиса базы данных
-        //builder.Services.AddSingleton<DatabaseService>(sp =>
-        //    new DatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "easysec.db3")));
+        // Регистрация страниц в DI-контейнере
+        builder.Services.AddTransient<EasySEC.MainPage>();
+        builder.Services.AddTransient<EasySEC.DocumentsPage>();
+        builder.Services.AddTransient<EasySEC.PlaceholderPage>();
 
-        //var dbPath = Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3");
-        //var dbService = new DatabaseService(dbPath);
+        // Регистрация сервиса базы данных
+        builder.Services.AddSingleton<DatabaseService>(sp =>
+            new DatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "easysec.db3")));
+
+        var dbPath = Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3");
+        var dbService = new DatabaseService(dbPath);
 
         return builder.Build();
     }
