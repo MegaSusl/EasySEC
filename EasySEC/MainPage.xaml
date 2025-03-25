@@ -46,6 +46,7 @@
                     <StackLayout>
                         <Label Text="Уведомления" TextColor="black" FontSize="18" />
                         <Label Text="Завтра заседание комиссии в 10:00" TextColor="black" Style="{StaticResource BodyTextStyle}" />
+                        <Button Text="Загрузить из Excel" Clicked="OnLoadFromExcelClicked" />
                     </StackLayout>
                 </Frame>
             </Grid>

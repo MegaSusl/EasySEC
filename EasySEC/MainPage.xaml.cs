@@ -7,11 +7,14 @@ namespace EasySEC
     public partial class MainPage : ContentPage
     {
         readonly ILogger<MainPage> _logger;
-
+        private ExcelParser _excelParser;
+        private DatabaseService _databaseService;
         public MainPage(ILogger<MainPage> logger)
         {
             InitializeComponent();
             _logger = logger;
+            _excelParser = new ExcelParser(_logger);
+            _databaseService = new DatabaseService(Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3"));
         }
 
         protected override async void OnAppearing()
@@ -81,6 +84,40 @@ namespace EasySEC
             if (!Directory.Exists(outputDir))
             {
                 Directory.CreateDirectory(outputDir);
+            }
+        }
+        public async Task LoadStudentsFromExcelAsync(string excelFilePath)
+        {
+            var students = _excelParser.ReadStudentsFromExcel(excelFilePath);
+            foreach (var student in students)
+            {
+                await _databaseService.SaveUserAsync(student);
+            }
+        }
+        private async void OnLoadFromExcelClicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var result = await FilePicker.PickAsync(new PickOptions
+                {
+                    FileTypes = new FilePickerFileType(new Dictionary<DevicePlatform, IEnumerable<string>>
+            {
+                { DevicePlatform.WinUI, new[] { ".xlsx" } },
+                { DevicePlatform.Android, new[] { "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" } },
+                { DevicePlatform.iOS, new[] { "org.openxmlformats.spreadsheetml.sheet" } }
+            }),
+                    PickerTitle = "Выберите файл Excel"
+                });
+
+                if (result != null)
+                {
+                    await LoadStudentsFromExcelAsync(result.FullPath);
+                    await DisplayAlert("Успех", "Данные успешно загружены в базу!", "ОК");
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ошибка", $"Произошла ошибка: {ex.Message}", "ОК");
             }
         }
     }

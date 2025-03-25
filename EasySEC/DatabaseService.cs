@@ -14,7 +14,7 @@ namespace EasySEC
         public DatabaseService(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
-            //_database.CreateTableAsync<Student>().Wait();
+            _database.CreateTableAsync<Student>().Wait();
             //_database.CreateTableAsync<Supervisor>().Wait();
             //_database.CreateTableAsync<FinalQualifyingWork>().Wait();
         }
@@ -42,6 +42,6 @@ namespace EasySEC
         public Task<int> DeleteUserAsync(Student user)
         {
             return _database.DeleteAsync(user);
-        }
+        }        
     }
 }
