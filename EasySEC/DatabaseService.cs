@@ -17,12 +17,23 @@ namespace EasySEC
             _database.CreateTableAsync<Student>().Wait();
             //_database.CreateTableAsync<Supervisor>().Wait();
             //_database.CreateTableAsync<FinalQualifyingWork>().Wait();
+            System.Diagnostics.Debug.WriteLine(dbPath);
         }
 
         // Получение всех Student
         public Task<List<Student>> GetStudentsAsync()
         {
-            return _database.Table<Student>().ToListAsync();
+            try
+            {
+                var students = _database.Table<Student>().ToListAsync();
+                System.Diagnostics.Debug.WriteLine($"Number of students loaded: {students.Result.Count}");
+                return students;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error fetching students: {ex.Message}");
+                throw;
+            }
         }
 
         // Сохранение пользователя (добавление или обновление)

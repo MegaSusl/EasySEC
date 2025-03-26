@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 
 namespace EasySEC;
 
@@ -9,6 +10,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseMauiCommunityToolkit()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -22,11 +24,12 @@ public static class MauiProgram
         // Регистрация страниц в DI-контейнере
         builder.Services.AddTransient<EasySEC.MainPage>();
         builder.Services.AddTransient<EasySEC.DocumentsPage>();
+        builder.Services.AddTransient<EasySEC.StudentsPage>();
         builder.Services.AddTransient<EasySEC.PlaceholderPage>();
 
         // Регистрация сервиса базы данных
         builder.Services.AddSingleton<DatabaseService>(sp =>
-            new DatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "easysec.db3")));
+            new DatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "mydatabase.db3")));
 
         var dbPath = Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3");
         var dbService = new DatabaseService(dbPath);

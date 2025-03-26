@@ -19,7 +19,7 @@
     <ShellContent Title="Главная" Icon="main.png" ContentTemplate="{DataTemplate views:MainPage}" />
     <ShellContent Title="Документы" Icon="docs.png" ContentTemplate="{DataTemplate views:DocumentsPage}" />
     <ShellContent Title="Заседания" Icon="zas.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
-    <ShellContent Title="Студенты" Icon="students.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
+    <ShellContent Title="Студенты" Icon="students.png" ContentTemplate="{DataTemplate views:StudentsPage}" />
     <ShellContent Title="Преподаватели" Icon="prepod.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
     <ShellContent Title="Шаблоны" Icon="shabl.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
     <ShellContent Title="Настройки" Icon="settings.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
