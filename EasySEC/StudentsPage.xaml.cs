@@ -66,7 +66,7 @@ public partial class StudentsPage : ContentPage
             {
                 try
                 {
-                    await _databaseService.DeleteUserAsync(student);
+                    await _databaseService.DeleteStudentAsync(student);
                     Students.Remove(student);
                     _logger.LogInformation($"Студент {student.FullName} удалён");
                 }

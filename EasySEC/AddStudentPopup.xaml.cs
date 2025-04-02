@@ -33,7 +33,7 @@ public partial class AddStudentPopup : Popup
             phone = phone.Text,
             groupId = Int64.Parse(groupId.Text)
         };
-        await _databaseService.SaveUserAsync(student);
+        await _databaseService.SaveStudentAsync(student);
         Close();
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EasySEC
 {
-    class Supervisor
+    public partial class Supervisor
     {
         [PrimaryKey, AutoIncrement]
         public long id { get; set; }

@@ -14,7 +14,7 @@ namespace EasySEC
             InitializeComponent();
             _logger = logger;
             _excelParser = new ExcelParser(_logger);
-            _databaseService = new DatabaseService(Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3"));
+            _databaseService = new DatabaseService(Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3"));            
         }
 
         protected override async void OnAppearing()
@@ -91,7 +91,7 @@ namespace EasySEC
             var students = _excelParser.ReadStudentsFromExcel(excelFilePath);
             foreach (var student in students)
             {
-                await _databaseService.SaveUserAsync(student);
+                await _databaseService.SaveStudentAsync(student);
             }
         }
         private async void OnLoadFromExcelClicked(object sender, EventArgs e)
@@ -119,6 +119,6 @@ namespace EasySEC
             {
                 await DisplayAlert("Ошибка", $"Произошла ошибка: {ex.Message}", "ОК");
             }
-        }
+        }        
     }
 }

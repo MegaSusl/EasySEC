@@ -15,7 +15,7 @@ namespace EasySEC
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Student>().Wait();
-            //_database.CreateTableAsync<Supervisor>().Wait();
+            _database.CreateTableAsync<Supervisor>().Wait();
             //_database.CreateTableAsync<FinalQualifyingWork>().Wait();
             System.Diagnostics.Debug.WriteLine(dbPath);
         }
@@ -35,9 +35,34 @@ namespace EasySEC
                 throw;
             }
         }
+        public Task<List<Supervisor>> GetSupervisorsAsync()
+        {
+            try
+            {
+                var supervisor = _database.Table<Supervisor>().ToListAsync();
+                System.Diagnostics.Debug.WriteLine($"Number of students loaded: {supervisor.Result.Count}");
+                return supervisor;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error fetching students: {ex.Message}");
+                throw;
+            }
+        }
 
         // Сохранение пользователя (добавление или обновление)
-        public Task<int> SaveUserAsync(Student user)
+        public Task<int> SaveStudentAsync(Student user)
+        {
+            if (user.id != 0)
+            {
+                return _database.UpdateAsync(user); // Обновление существующей записи
+            }
+            else
+            {
+                return _database.InsertAsync(user); // Добавление новой записи
+            }
+        }
+        public Task<int> SaveSupervisorAsync(Supervisor user)
         {
             if (user.id != 0)
             {
@@ -50,7 +75,11 @@ namespace EasySEC
         }
 
         // Удаление пользователя
-        public Task<int> DeleteUserAsync(Student user)
+        public Task<int> DeleteStudentAsync(Student user)
+        {
+            return _database.DeleteAsync(user);
+        }        
+        public Task<int> DeleteSupervisorAsync(Supervisor user)
         {
             return _database.DeleteAsync(user);
         }        
