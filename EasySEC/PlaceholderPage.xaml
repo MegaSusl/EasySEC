@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EasySEC.PlaceholderPage">
+             x:Class="EasySEC.PlaceholderPage"
+             BackgroundColor="#4B4B4B">
     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
         <Label Text="Страница в разработке" FontSize="24" />
     </StackLayout>

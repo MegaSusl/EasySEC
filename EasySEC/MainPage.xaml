@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EasySEC.MainPage">
 
-    <Grid RowDefinitions="*,Auto" Padding="0,10,1,1" BackgroundColor="#1E1E1E">
+    <Grid RowDefinitions="*,Auto" Padding="0,10,1,1" BackgroundColor="#4B4B4B">
         <!-- Основное содержимое -->
         <ScrollView Grid.Row="0">
             <Grid RowDefinitions="Auto,Auto,Auto">
@@ -18,8 +18,8 @@
 
                     </Grid>
                 </Frame>
-                <Frame Grid.Row="1">
-                    <VerticalStackLayout Padding="20" Spacing="10">
+                <Frame Grid.Row="1" BackgroundColor="#1e1e1e">
+                    <VerticalStackLayout Padding="20" Spacing="10" BackgroundColor="#4B4B4B">
                         <Label Text="Fill in Your Details" FontSize="Large" TextColor="#333333" HorizontalOptions="Center" />
 
                         <Label Text="Name:" TextColor="#333333" />

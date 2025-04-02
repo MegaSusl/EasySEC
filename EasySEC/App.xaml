@@ -4,6 +4,14 @@
              x:Class="EasySEC.App">
     <Application.Resources>
         <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#FF123456</Color>
+            <Color x:Key="BackgroundColor">#FFFFFFFF</Color>
+            <Color x:Key="TextColor">#FF000000</Color>
+            <!-- Глобальный стиль NavigationBar -->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#4B4B4B" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
             <!-- Стиль для заголовков -->
             <Style x:Key="HeaderLabelStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="24" />
@@ -15,7 +23,7 @@
             <!-- Стиль для текста -->
             <Style x:Key="BodyTextStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="14" />
-                <Setter Property="TextColor" Value="black" />
+                <Setter Property="TextColor" Value="White" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

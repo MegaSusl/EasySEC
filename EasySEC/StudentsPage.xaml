@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EasySEC.StudentsPage"
              Title="Список студентов"
-             BackgroundColor="#F5F5F5">
+             BackgroundColor="#4B4B4B">
     <StackLayout Padding="10">
         <!-- Заголовок -->
         <Label Text="Список студентов" 
