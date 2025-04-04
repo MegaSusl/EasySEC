@@ -56,6 +56,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Logos\MainLogo.scale-100.png" />
+	  <None Remove="Resources\Logos\MainLogo.scale-150.png" />
+	  <None Remove="Resources\Logos\MainLogo.scale-200.png" />
+	  <None Remove="Resources\Logos\MainLogo.scale-400.png" />
 	  <None Remove="Resources\PNGs\General\docs.png" />
 	  <None Remove="Resources\PNGs\General\prepod.png" />
 	  <None Remove="Resources\PNGs\General\settings.png" />
@@ -63,6 +67,13 @@
 	  <None Remove="Resources\PNGs\General\students.png" />
 	  <None Remove="Resources\PNGs\General\zas.png" />
 	  <None Remove="Resources\PNGs\main.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Resources\Logos\MainLogo.scale-100.png" />
+	  <Content Include="Resources\Logos\MainLogo.scale-150.png" />
+	  <Content Include="Resources\Logos\MainLogo.scale-200.png" />
+	  <Content Include="Resources\Logos\MainLogo.scale-400.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -82,7 +93,13 @@
 	  <MauiXaml Update="AddStudentPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="AddSupervisorPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="DocumentsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PickGroupPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="PlaceholderPage.xaml">

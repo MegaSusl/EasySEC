@@ -1,16 +1,22 @@
 namespace EasySEC;
+
+using CommunityToolkit.Maui.Views;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using Xceed.Words.NET;
 
 public partial class DocumentsPage : ContentPage
 {
+
+    private readonly DatabaseService _databaseService;
     readonly ILogger<DocumentsPage> _logger;
     private List<TemplateItem> templates;
 
-    public DocumentsPage(ILogger<DocumentsPage> logger)
+    public DocumentsPage(ILogger<DocumentsPage> logger, DatabaseService databaseService)
     {
         InitializeComponent();
         _logger = logger;
+        _databaseService = databaseService;
     }
 
     protected override void OnAppearing()
@@ -104,5 +110,10 @@ public partial class DocumentsPage : ContentPage
                 DisplayAlert("Error", $"Failed to delete {template.Name}: {ex.Message}", "OK");
             }
         }
+    }
+    private void OnUseClicked(object sender, EventArgs e)
+    {
+        var popup = new PickGroupPopup(_databaseService);
+        this.ShowPopup(popup);
     }
 }

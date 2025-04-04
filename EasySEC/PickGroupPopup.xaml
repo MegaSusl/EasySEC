@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+       x:Class="EasySEC.PickGroupPopup"
+       Size="300,400"
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+       Color="Transparent">
+
+    <Frame
+        CornerRadius="20"
+        Padding="10"
+        BackgroundColor="#F5F5F5">
+
+        <Grid
+            RowDefinitions="Auto,Auto"
+            RowSpacing="5">
+
+            <Label 
+                Grid.Row="0"
+                Text="Выберите группу" 
+                FontSize="Large" 
+                HorizontalOptions="Center" 
+                Margin="0,0,0,10"
+                TextColor="#333333"/>
+            
+            <Picker 
+                Grid.Row="1"
+                x:Name="templatePicker" 
+                Title="Выберите шаблон"
+                Margin="10,5"
+                BackgroundColor="White"
+                TextColor="Black"
+                TitleColor="#888888"
+                ItemsSource="{Binding Templates}"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding SelectedGroup, Mode=TwoWay}"/>
+
+            <Picker 
+                Grid.Row="1"
+                x:Name="groupPicker" 
+                Title="Выберите группу"
+                Margin="10,5"
+                BackgroundColor="White"
+                TextColor="Black"
+                TitleColor="#888888"
+                ItemsSource="{Binding Groups}"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding SelectedGroup, Mode=TwoWay}"/>
+
+            <Button 
+                Grid.Row="2"
+                Text="Сгенерировать" 
+                Command="{Binding Generate}"
+                Margin="10,15" 
+                HorizontalOptions="Fill"
+                BackgroundColor="#4CAF50"
+                    TextColor="White"/>
+        </Grid>
+    </Frame>
+</toolkit:Popup>

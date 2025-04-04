@@ -4,7 +4,13 @@
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net9.0-windows10.0.19041.0</ActiveDebugFramework>
     <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
+    <AppIconSource>C:\Users\Susli\Downloads\53c26abf-e8ee-4421-b13c-7975a392b3c0.png</AppIconSource>
   </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Update="Platforms\Windows\Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
   <ItemGroup>
     <None Update="Platforms\Windows\Package.appxmanifest">
       <SubType>Designer</SubType>

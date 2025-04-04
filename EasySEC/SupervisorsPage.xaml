@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EasySEC.SupervisorsPage"
-             Title="SupervisorsPage"
+             Title="Список преподавателей"
              BackgroundColor="#4B4B4B">
     <Grid Padding="10">
         <Grid.RowDefinitions>
@@ -13,14 +13,6 @@
             <RowDefinition Height="Auto" />
             <!-- Для кнопки -->
         </Grid.RowDefinitions>
-
-        <!-- Заголовок -->
-        <Label Grid.Row="0" 
-           Text="Список студентов" 
-           FontSize="Large" 
-           TextColor="#333333" 
-           HorizontalOptions="Center" 
-           Margin="0,0,0,10"/>
 
         <!-- Таблица студентов -->
         <Frame Grid.Row="1" 
@@ -40,9 +32,8 @@
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Text="№" FontAttributes="Bold" TextColor="#333333" />
                         <Label Grid.Column="1" Text="ФИО" FontAttributes="Bold" TextColor="#333333" />
-                        <Label Grid.Column="2" Text="Email" FontAttributes="Bold" TextColor="#333333" />
-                        <Label Grid.Column="3" Text="Телефон" FontAttributes="Bold" TextColor="#333333" />
-                        <Label Grid.Column="4" Text="Действия" FontAttributes="Bold" TextColor="#333333" />
+                        <Label Grid.Column="2" Text="Должность" FontAttributes="Bold" TextColor="#333333" />
+                        <Label Grid.Column="3" Text="Действия" FontAttributes="Bold" TextColor="#333333" />
                     </Grid>
                 </CollectionView.Header>
                 <CollectionView.ItemTemplate>
@@ -51,15 +42,13 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="2*" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="{Binding Id}" TextColor="#555555" VerticalOptions="Center" />
+                            <Label Grid.Column="0" Text="{Binding id}" TextColor="#555555" VerticalOptions="Center" />
                             <Label Grid.Column="1" Text="{Binding FullName}" TextColor="#555555" VerticalOptions="Center" />
-                            <Label Grid.Column="2" Text="{Binding Email}" TextColor="#555555" VerticalOptions="Center" />
-                            <Label Grid.Column="3" Text="{Binding Phone}" TextColor="#555555" VerticalOptions="Center" />
-                            <HorizontalStackLayout Grid.Column="4" Spacing="5" VerticalOptions="Center">
+                            <Label Grid.Column="2" Text="{Binding position}" TextColor="#555555" VerticalOptions="Center" />
+                            <HorizontalStackLayout Grid.Column="3" Spacing="5" VerticalOptions="Center">
                                 <Button Text="Изменить" 
                                     Clicked="OnEditSupervisorClicked" 
                                     BackgroundColor="#4CAF50" 
@@ -86,7 +75,7 @@
 
         <!-- Кнопка "Добавить студента" -->
         <Button Grid.Row="2" 
-            Text="Добавить студента" 
+            Text="Добавить преподавателя" 
             Clicked="OnAddSupervisorClicked" 
             BackgroundColor="#2196F3" 
             TextColor="White" 

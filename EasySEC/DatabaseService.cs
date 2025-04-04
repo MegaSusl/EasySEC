@@ -40,12 +40,12 @@ namespace EasySEC
             try
             {
                 var supervisor = _database.Table<Supervisor>().ToListAsync();
-                System.Diagnostics.Debug.WriteLine($"Number of students loaded: {supervisor.Result.Count}");
+                System.Diagnostics.Debug.WriteLine($"Number of supervisors loaded: {supervisor.Result.Count}");
                 return supervisor;
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Error fetching students: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Error fetching supervisors: {ex.Message}");
                 throw;
             }
         }
@@ -72,6 +72,10 @@ namespace EasySEC
             {
                 return _database.InsertAsync(user); // Добавление новой записи
             }
+        }
+        public async Task<List<Student>> GetStudentsByGroupAsync(long groupId)
+        {
+            return await _database.Table<Student>().Where(s => s.groupId == groupId).ToListAsync();
         }
 
         // Удаление пользователя

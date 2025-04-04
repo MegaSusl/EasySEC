@@ -14,14 +14,6 @@
             <!-- Для кнопки -->
         </Grid.RowDefinitions>
 
-        <!-- Заголовок -->
-        <Label Grid.Row="0" 
-               Text="Список студентов" 
-               FontSize="Large" 
-               TextColor="#333333" 
-               HorizontalOptions="Center" 
-               Margin="0,0,0,10"/>
-
         <!-- Таблица студентов -->
         <Frame Grid.Row="1" 
                BackgroundColor="White" 
@@ -55,10 +47,10 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="{Binding Id}" TextColor="#555555" VerticalOptions="Center" />
+                            <Label Grid.Column="0" Text="{Binding id}" TextColor="#555555" VerticalOptions="Center" />
                             <Label Grid.Column="1" Text="{Binding FullName}" TextColor="#555555" VerticalOptions="Center" />
-                            <Label Grid.Column="2" Text="{Binding Email}" TextColor="#555555" VerticalOptions="Center" />
-                            <Label Grid.Column="3" Text="{Binding Phone}" TextColor="#555555" VerticalOptions="Center" />
+                            <Label Grid.Column="2" Text="{Binding email}" TextColor="#555555" VerticalOptions="Center" />
+                            <Label Grid.Column="3" Text="{Binding phone}" TextColor="#555555" VerticalOptions="Center" />
                             <HorizontalStackLayout Grid.Column="4" Spacing="5" VerticalOptions="Center">
                                 <Button Text="Изменить" 
                                         Clicked="OnEditStudentClicked" 
