@@ -105,7 +105,10 @@ namespace EasySEC
                 return _database.InsertAsync(user); // Добавление новой записи
             }
         }
-
+        public async Task<List<Student>> GetStudentsByGroupAsync(long groupId)
+        {
+            return await _database.Table<Student>().Where(s => s.groupId == groupId).ToListAsync();
+        }
         // Удаление пользователя
         public Task<int> DeleteStudentAsync(Student user)
         {

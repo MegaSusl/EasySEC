@@ -2,6 +2,7 @@ using CommunityToolkit.Maui.Views;
 using Microsoft.Extensions.Logging;
 using System.Windows.Input;
 using System.Collections.ObjectModel;
+using Xceed.Words.NET;
 namespace EasySEC;
 
 public partial class PickGroupPopup : Popup
@@ -67,14 +68,75 @@ public partial class PickGroupPopup : Popup
 
     private async void OnGenerateClicked()
     {
-        if (SelectedGroup == null || SelectedTemplate == null)
+        // Проверяем, выбраны ли шаблон и группа
+        if (SelectedTemplate == null || SelectedGroup == null)
         {
-            await Application.Current.MainPage.DisplayAlert("Ошибка", "Выберите группу и шаблон", "ОК");
+            await Application.Current.MainPage.DisplayAlert("Ошибка", "Выберите шаблон и группу", "ОК");
             return;
         }
 
-        _logger?.LogInformation($"Генерация документа для группы {SelectedGroup.name} с шаблоном {SelectedTemplate.Name}");
-        // Логика генерации документа
-        Close();
+        try
+        {
+            // Получаем список студентов для выбранной группы
+            var students = await _databaseService.GetStudentsByGroupAsync(SelectedGroup.id);
+            if (students == null || students.Count == 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "В выбранной группе нет студентов", "ОК");
+                return;
+            }
+
+            // Путь к шаблону
+            string templatePath = SelectedTemplate.Path;
+
+            // Путь для сохранения нового документа
+            string outputDir = Path.Combine(FileSystem.AppDataDirectory, "Output");
+            if (!Directory.Exists(outputDir))
+                Directory.CreateDirectory(outputDir);
+            string outputPath = Path.Combine(outputDir, $"list_oznakomleniya_{SelectedGroup.name}_{DateTime.Now:yyyyMMddHHmmss}.docx");
+
+            // Загружаем шаблон
+            using (var doc = DocX.Load(templatePath))
+            {
+                // Заменяем placeholders
+                doc.ReplaceText("[GROUP]", SelectedGroup.name);
+                doc.ReplaceText("[DATE]", DateTime.Now.ToString("dd.MM.yyyy")); // Текущая дата, можно заменить на ввод пользователя
+
+                // Находим первую таблицу в документе
+                if (doc.Tables.Count == 0)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", "В шаблоне нет таблицы", "ОК");
+                    return;
+                }
+                var table = doc.Tables[0];
+
+                // Удаляем все строки кроме заголовка (первая строка — заголовок)
+                while (table.RowCount > 1)
+                {
+                    table.RemoveRow(1);
+                }
+                const float rowHeight = 20f;
+                // Добавляем строки для каждого студента
+                for (int i = 0; i < students.Count; i++)
+                {
+                    var student = students[i];
+                    var row = table.InsertRow();
+                    row.Height = rowHeight; // Устанавливаем высоту строки
+                    row.Cells[0].Paragraphs[0].Append((i + 1).ToString()); // № п/п
+                    row.Cells[1].Paragraphs[0].Append($"{student.surname} {student.name} {student.middleName}"); // ФИО
+                    row.Cells[2].Paragraphs[0].Append(""); // Подпись, дата (оставляем пустым)
+                }
+
+                // Сохраняем документ
+                doc.SaveAs(outputPath);
+            }
+
+            // Уведомляем пользователя
+            await Application.Current.MainPage.DisplayAlert("Успех", $"Документ сохранен: {outputPath}", "ОК");
+            Close(); // Закрываем попап
+        }
+        catch (Exception ex)
+        {
+            await Application.Current.MainPage.DisplayAlert("Ошибка", $"Не удалось сгенерировать документ: {ex.Message}", "ОК");
+        }
     }
 }
