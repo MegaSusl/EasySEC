@@ -40,6 +40,6 @@
     <ShellContent Title="Студенты" Icon="students.png" ContentTemplate="{DataTemplate views:StudentsPage}" />
     <ShellContent Title="Преподаватели" Icon="prepod.png" ContentTemplate="{DataTemplate views:SupervisorsPage}" />
     <ShellContent Title="Шаблоны" Icon="shabl.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
-    <ShellContent Title="Настройки" Icon="settings.png" ContentTemplate="{DataTemplate views:PlaceholderPage}" />
+    <ShellContent Title="Настройки" Icon="settings.png" ContentTemplate="{DataTemplate views:PreferencesPage}" />
 
 </Shell>

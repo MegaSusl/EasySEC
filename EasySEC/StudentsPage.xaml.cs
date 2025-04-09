@@ -1,6 +1,7 @@
 using CommunityToolkit.Maui.Views;
 using Microsoft.Extensions.Logging;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 using System.Xml.Linq;
 
 namespace EasySEC;

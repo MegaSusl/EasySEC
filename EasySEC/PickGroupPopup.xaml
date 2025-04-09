@@ -14,7 +14,7 @@
         BackgroundColor="#F5F5F5">
 
         <Grid
-            RowDefinitions="Auto,Auto"
+            RowDefinitions="Auto,Auto,Auto,Auto"
             RowSpacing="5">
 
             <Label 
@@ -38,7 +38,7 @@
                 SelectedItem="{Binding SelectedGroup, Mode=TwoWay}"/>
 
             <Picker 
-                Grid.Row="1"
+                Grid.Row="2"
                 x:Name="groupPicker" 
                 Title="Выберите группу"
                 Margin="10,5"
@@ -46,11 +46,11 @@
                 TextColor="Black"
                 TitleColor="#888888"
                 ItemsSource="{Binding Groups}"
-                ItemDisplayBinding="{Binding Name}"
+                ItemDisplayBinding="{Binding name}"
                 SelectedItem="{Binding SelectedGroup, Mode=TwoWay}"/>
 
             <Button 
-                Grid.Row="2"
+                Grid.Row="3"
                 Text="Сгенерировать" 
                 Command="{Binding Generate}"
                 Margin="10,15" 

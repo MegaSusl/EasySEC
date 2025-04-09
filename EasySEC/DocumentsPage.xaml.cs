@@ -8,15 +8,17 @@ using Xceed.Words.NET;
 public partial class DocumentsPage : ContentPage
 {
 
-    private readonly DatabaseService _databaseService;
+    private DatabaseService _databaseService;
     readonly ILogger<DocumentsPage> _logger;
+    readonly ILogger<PickGroupPopup> _popupLogger;
     private List<TemplateItem> templates;
 
-    public DocumentsPage(ILogger<DocumentsPage> logger, DatabaseService databaseService)
+    public DocumentsPage(ILogger<DocumentsPage> logger, ILogger<PickGroupPopup> popupLogger, DatabaseService databaseService)
     {
         InitializeComponent();
         _logger = logger;
-        _databaseService = databaseService;
+        _popupLogger = popupLogger;
+        _databaseService = new DatabaseService(Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3"));
     }
 
     protected override void OnAppearing()
@@ -113,7 +115,7 @@ public partial class DocumentsPage : ContentPage
     }
     private void OnUseClicked(object sender, EventArgs e)
     {
-        var popup = new PickGroupPopup(_databaseService);
+        var popup = new PickGroupPopup(_databaseService, _popupLogger);
         this.ShowPopup(popup);
     }
 }

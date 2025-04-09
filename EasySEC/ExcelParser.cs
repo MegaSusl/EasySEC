@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace EasySEC
@@ -11,16 +12,15 @@ namespace EasySEC
     internal class ExcelParser
     {
         private ILogger<MainPage> _logger;
-
-        public ExcelParser(ILogger<MainPage> logger)
+        public ExcelParser(ILogger<MainPage> logger, DatabaseService _databaseService)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        public List<Student> ReadStudentsFromExcel(string filePath)
+        public async Task<List<Student>> ReadStudentsFromExcel(string filePath, DatabaseService _databaseService)
         {
             var students = new List<Student>();
-
+            long groupId = 0;
             try
             {
                 System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
@@ -37,21 +37,39 @@ namespace EasySEC
                         reader.Read();
 
                         while (reader.Read())
-                        {
+                        {   
                             var fullName = reader.GetString(1); // ФИО
                             var nameParts = fullName.Split(' ');
                             double phoneVal = reader.GetDouble(3);
+                            if (groupId == 0)
+                            {
+                                var groupName = reader.GetString(4); // Группа
+                                var groups = await _databaseService.GetAllGroupsAsync();
+                                var isExist = false;
+                                foreach (var i in groups)
+                                {
+                                    if (i.name == groupName) { isExist = true; groupId = i.id; break; };
+                                }
+                                if (!isExist)
+                                {
+                                    var group = new Group
+                                    {
+                                        name = groupName
+                                    };
+                                    groupId = await _databaseService.SaveGroupAsync(group);
+                                }
+                            }
 
                             var student = new Student
                             {
-                                //id = reader.GetDouble(0),         // №
                                 name = nameParts.Length > 0 ? nameParts[1] : string.Empty,
                                 middleName = nameParts.Length > 1 ? nameParts[0] : string.Empty,
                                 surname = nameParts.Length > 2 ? nameParts[2] : string.Empty,
-                                email = reader.GetString(2),                // Email
-                                phone = phoneVal.ToString(),                // Телефон
-                                                                            //Group = reader.GetString(4)                 // Группа
+                                email = reader.GetString(2),    // Email
+                                phone = phoneVal.ToString(),    // Телефон
+                                groupId = groupId
                             };
+
                             students.Add(student);
                         }
                     }

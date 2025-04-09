@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace EasySEC
 {
-    class TemplateItem
+    public partial class TemplateItem
     {
         public string Name { get; set; }
         public string Path { get; set; }
+        public bool IsEnabled { get; set; }
     }
 }

@@ -13,8 +13,8 @@ namespace EasySEC
         {
             InitializeComponent();
             _logger = logger;
-            _excelParser = new ExcelParser(_logger);
             _databaseService = new DatabaseService(Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3"));            
+            _excelParser = new ExcelParser(_logger, _databaseService);
         }
 
         protected override async void OnAppearing()
@@ -88,8 +88,8 @@ namespace EasySEC
         }
         public async Task LoadStudentsFromExcelAsync(string excelFilePath)
         {
-            var students = _excelParser.ReadStudentsFromExcel(excelFilePath);
-            foreach (var student in students)
+            var students = _excelParser.ReadStudentsFromExcel(excelFilePath, _databaseService);
+            foreach (var student in await students)
             {
                 await _databaseService.SaveStudentAsync(student);
             }

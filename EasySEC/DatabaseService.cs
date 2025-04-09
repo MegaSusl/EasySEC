@@ -16,8 +16,10 @@ namespace EasySEC
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Student>().Wait();
             _database.CreateTableAsync<Supervisor>().Wait();
+            _database.CreateTableAsync<Group>().Wait();
             //_database.CreateTableAsync<FinalQualifyingWork>().Wait();
-            System.Diagnostics.Debug.WriteLine(dbPath);
+            System.Diagnostics.Debug.WriteLine($"Database initialized at: {dbPath}");
+            // Проверяем, существует ли таблица Groups           
         }
 
         // Получение всех Student
@@ -32,6 +34,20 @@ namespace EasySEC
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine($"Error fetching students: {ex.Message}");
+                throw;
+            }
+        }
+        public Task<List<Group>> GetAllGroupsAsync()
+        {
+            try
+            {
+                var groups =  _database.Table<Group>().ToListAsync();
+                System.Diagnostics.Debug.WriteLine($"Number of groups loaded: {groups.Result.Count}");
+                return groups;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error fetching groups: {ex.Message}");
                 throw;
             }
         }
@@ -50,6 +66,22 @@ namespace EasySEC
             }
         }
 
+        // Сохранение group (добавление или обновление)
+        public async Task<long> SaveGroupAsync(Group group)
+        {
+            if (group.id != 0)
+            {
+                // Обновление существующей записи
+                await _database.UpdateAsync(group);
+                return group.id; // Возвращаем существующий ID
+            }
+            else
+            {
+                // Добавление новой записи и возврат сгенерированного ID
+                await _database.InsertAsync(group);
+                return group.id; // SQLite автоматически заполняет поле id после вставки
+            }
+        }
         // Сохранение пользователя (добавление или обновление)
         public Task<int> SaveStudentAsync(Student user)
         {
@@ -72,10 +104,6 @@ namespace EasySEC
             {
                 return _database.InsertAsync(user); // Добавление новой записи
             }
-        }
-        public async Task<List<Student>> GetStudentsByGroupAsync(long groupId)
-        {
-            return await _database.Table<Student>().Where(s => s.groupId == groupId).ToListAsync();
         }
 
         // Удаление пользователя
