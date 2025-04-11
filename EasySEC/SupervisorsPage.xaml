@@ -25,13 +25,12 @@
                     <Grid BackgroundColor="#E0E0E0" Padding="10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="2*" />
-                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="№" FontAttributes="Bold" TextColor="#333333" />
-                        <Label Grid.Column="1" Text="ФИО" FontAttributes="Bold" TextColor="#333333" />
+                        <Label Grid.Column="0" Text="№" FontAttributes="Bold" TextColor="#333333" Margin="0,0,30,0" MinimumWidthRequest="30"/>
+                        <Label Grid.Column="1" Text="ФИО" FontAttributes="Bold" TextColor="#333333" WidthRequest="400"/>
                         <Label Grid.Column="2" Text="Должность" FontAttributes="Bold" TextColor="#333333" />
                         <Label Grid.Column="3" Text="Действия" FontAttributes="Bold" TextColor="#333333" />
                     </Grid>
@@ -41,12 +40,12 @@
                         <Grid Padding="10" BackgroundColor="White">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="{Binding id}" TextColor="#555555" VerticalOptions="Center" />
-                            <Label Grid.Column="1" Text="{Binding FullName}" TextColor="#555555" VerticalOptions="Center" />
+                            <Label Grid.Column="0" Text="{Binding id}" TextColor="#555555" VerticalOptions="Center" Margin="0,0,30,0" MinimumWidthRequest="30"/>
+                            <Label Grid.Column="1" Text="{Binding FullName}" TextColor="#555555" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="400"/>
                             <Label Grid.Column="2" Text="{Binding position}" TextColor="#555555" VerticalOptions="Center" />
                             <HorizontalStackLayout Grid.Column="3" Spacing="5" VerticalOptions="Center">
                                 <Button Text="Изменить" 

@@ -12,6 +12,7 @@ public partial class DocumentsPage : ContentPage
     readonly ILogger<DocumentsPage> _logger;
     readonly ILogger<PickGroupPopup> _popupLogger;
     private List<TemplateItem> templates;
+    private ExcelParser _excelParser;
 
     public DocumentsPage(ILogger<DocumentsPage> logger, ILogger<PickGroupPopup> popupLogger, DatabaseService databaseService)
     {
@@ -19,6 +20,7 @@ public partial class DocumentsPage : ContentPage
         _logger = logger;
         _popupLogger = popupLogger;
         _databaseService = new DatabaseService(Path.Combine(FileSystem.AppDataDirectory, "mydatabase.db3"));
+        _excelParser = new ExcelParser(_logger, _databaseService);
     }
 
     protected override void OnAppearing()
@@ -117,5 +119,39 @@ public partial class DocumentsPage : ContentPage
     {
         var popup = new PickGroupPopup(_databaseService, _popupLogger);
         this.ShowPopup(popup);
+    }
+    public async Task LoadStudentsFromExcelAsync(string excelFilePath)
+    {
+        var students = _excelParser.ReadStudentsFromExcel(excelFilePath, _databaseService);
+        foreach (var student in await students)
+        {
+            await _databaseService.SaveStudentAsync(student);
+        }
+    }
+    private async void OnLoadFromExcelClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            var result = await FilePicker.PickAsync(new PickOptions
+            {
+                FileTypes = new FilePickerFileType(new Dictionary<DevicePlatform, IEnumerable<string>>
+            {
+                { DevicePlatform.WinUI, new[] { ".xlsx" } },
+                { DevicePlatform.Android, new[] { "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" } },
+                { DevicePlatform.iOS, new[] { "org.openxmlformats.spreadsheetml.sheet" } }
+            }),
+                PickerTitle = "Выберите файл Excel"
+            });
+
+            if (result != null)
+            {
+                await LoadStudentsFromExcelAsync(result.FullPath);
+                await DisplayAlert("Успех", "Данные успешно загружены в базу!", "ОК");
+            }
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Ошибка", $"Произошла ошибка: {ex.Message}", "ОК");
+        }
     }
 }

@@ -11,8 +11,8 @@ namespace EasySEC
 {
     internal class ExcelParser
     {
-        private ILogger<MainPage> _logger;
-        public ExcelParser(ILogger<MainPage> logger, DatabaseService _databaseService)
+        private ILogger<DocumentsPage> _logger;
+        public ExcelParser(ILogger<DocumentsPage> logger, DatabaseService _databaseService)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }

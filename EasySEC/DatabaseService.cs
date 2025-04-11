@@ -117,6 +117,27 @@ namespace EasySEC
         public Task<int> DeleteSupervisorAsync(Supervisor user)
         {
             return _database.DeleteAsync(user);
-        }        
+        }
+
+        // Удаление всех студентов
+        public async Task DeleteAllStudentsAsync()
+        {
+            await _database.DeleteAllAsync<Student>();
+            System.Diagnostics.Debug.WriteLine("Все студенты удалены");
+        }
+
+        // Удаление всех групп
+        public async Task DeleteAllGroupsAsync()
+        {
+            await _database.DeleteAllAsync<Group>();
+            System.Diagnostics.Debug.WriteLine("Все группы удалены");
+        }
+
+        // Удаление всех преподавателей
+        public async Task DeleteAllSupervisorsAsync()
+        {
+            await _database.DeleteAllAsync<Supervisor>();
+            System.Diagnostics.Debug.WriteLine("Все преподаватели удалены");
+        }
     }
 }

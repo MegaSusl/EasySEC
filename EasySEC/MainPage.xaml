@@ -18,7 +18,7 @@
 
                     </Grid>
                 </Frame>
-                <Frame Grid.Row="1" BackgroundColor="#1e1e1e">
+                <Frame Grid.Row="1" IsVisible="Hidden" BackgroundColor="#1e1e1e">
                     <VerticalStackLayout Padding="20" Spacing="10" BackgroundColor="#4B4B4B">
                         <Label Text="Fill in Your Details" FontSize="Large" TextColor="#333333" HorizontalOptions="Center" />
 
@@ -46,7 +46,6 @@
                     <StackLayout>
                         <Label Text="Уведомления" TextColor="black" FontSize="18" />
                         <Label Text="Завтра заседание комиссии в 10:00" TextColor="black" Style="{StaticResource BodyTextStyle}" />
-                        <Button Text="Загрузить из Excel" Clicked="OnLoadFromExcelClicked" />
                     </StackLayout>
                 </Frame>
             </Grid>

@@ -19,6 +19,9 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button Text="Сохранить" Command="{Binding SaveCommand}" />
+        <Button Text="Сохранить" Command="{Binding SaveCommand}" Margin="10,10,10,0" />
+        <Button Text="Удалить всех студентов" Command="{Binding DeleteAllStudentsCommand}" Margin="10,5" BackgroundColor="#FF4444" TextColor="White" />
+        <Button Text="Удалить все группы" Command="{Binding DeleteAllGroupsCommand}" Margin="10,5" BackgroundColor="#FF4444" TextColor="White" />
+        <Button Text="Удалить всех преподавателей" Command="{Binding DeleteAllSupervisorsCommand}" Margin="10,5" BackgroundColor="#FF4444" TextColor="White" />
     </StackLayout>
 </ContentPage>

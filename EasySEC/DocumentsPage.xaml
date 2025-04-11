@@ -3,22 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EasySEC.DocumentsPage"
              Title="Документы">
-    <StackLayout Padding="0,10,0,0" BackgroundColor="#4B4B4B">
-        <Label Text="Список документов" FontSize="24" Padding="10" />
-        <!--<ListView>
-            <ListView.ItemsSource>
-                <x:Array Type="{x:Type x:String}" >
-                    <x:String >Протокол №1</x:String>
-                    <x:String>Протокол №2</x:String>
-                </x:Array>
-            </ListView.ItemsSource>
-        </ListView>-->
-        <HorizontalStackLayout Spacing="10" Margin="0,10,0,10">
-            <Button Text="Open Folder" Clicked="OnOpenFolderClicked" />
-            <Button Text="New Template" Clicked="OnNewTemplateClicked" />
+    
+    <Grid RowDefinitions="Auto, Auto, *, Auto" BackgroundColor="#4B4B4B">
+
+        <!-- Заголовок -->
+        <Label Grid.Row="0" Text="Список документов" FontSize="24" Padding="10" />
+
+        <!-- Кнопки -->
+        <HorizontalStackLayout Grid.Row="1" Spacing="10" Margin="10,10,0,10">
+            <Button Text="Открыть папку шаблонов" Clicked="OnOpenFolderClicked" />
+            <Button Text="Новый шаблон" Clicked="OnNewTemplateClicked" />
             <Button Text="Сгенерировать документ" Clicked="OnUseClicked" />
+            <Button Text="Загрузить из Excel" Clicked="OnLoadFromExcelClicked" />
         </HorizontalStackLayout>
-        <CollectionView x:Name="templatesCollectionView">
+
+        <!-- CollectionView — главное содержимое, заполняет всё пространство -->
+        <CollectionView Grid.Row="2" x:Name="templatesCollectionView">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">
@@ -34,12 +34,18 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Frame Grid.Row="1" BackgroundColor="#3B3A3A" Padding="10" CornerRadius="0" HorizontalOptions="FillAndExpand">
+
+        <!-- Нижний фрейм -->
+        <Frame Grid.Row="3"
+               BackgroundColor="#3B3A3A"
+               Padding="10"
+               CornerRadius="0"
+               HorizontalOptions="FillAndExpand">
             <Grid ColumnDefinitions="*,*,*">
                 <Label Grid.Column="0" Text="Документов создано: 15" TextColor="White" />
                 <Label Grid.Column="1" Text="Студентов в базе: 120" TextColor="White" />
                 <Label Grid.Column="2" Text="Ближайшее заседание: 25.02.2025" TextColor="White" />
             </Grid>
         </Frame>
-    </StackLayout>
+    </Grid>
 </ContentPage>
